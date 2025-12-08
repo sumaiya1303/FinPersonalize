@@ -1,0 +1,32 @@
+# Backend
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/app.db
+backend/.env
+backend/instance/
+backend/auth_error.log
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# General
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# Sensitive Data & User Uploads
+backend/statements/
+data/
+
+# Machine Learning & Evaluation Artifacts
+backend/*.pkl
+backend/evaluation_results.json
+backend/user_check_result.txt
+
+# Previous entries
+backend/firebase_credentials.json 

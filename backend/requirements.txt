@@ -1,0 +1,17 @@
+flask
+flask-cors
+flask-sqlalchemy
+firebase-admin
+pandas
+scikit-learn
+openai
+python-dotenv
+pdfplumber
+langchain
+langchain-community
+langchain-google-genai
+google-generativeai
+requests
+PyYAML>=6.0.2
+flask-migrate
+python-dateutil
