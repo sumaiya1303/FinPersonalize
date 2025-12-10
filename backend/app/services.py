@@ -250,6 +250,7 @@ def get_hybrid_recommendations(user_id):
         savings_products = Product.query.filter_by(category='Savings').all()
         for p in savings_products:
             recommendations.append({
+                'id': p.id,
                 'product': p.name,
                 'reason': 'Emergency Fund Builder: You should aim for 3-6 months of expenses.',
                 'score': 0.95,
@@ -264,6 +265,7 @@ def get_hybrid_recommendations(user_id):
         debt_products = Product.query.filter(Product.name.like('%Debt%')).all()
         for p in debt_products:
             recommendations.append({
+                'id': p.id,
                 'product': p.name,
                 'reason': 'Debt Optimization: We noticed frequent credit card payments.',
                 'score': 0.90,
@@ -306,6 +308,7 @@ def get_hybrid_recommendations(user_id):
                 # Avoid duplicates
                 if not any(r['product'] == product.name for r in recommendations):
                     recommendations.append({
+                        'id': product.id,
                         'product': product.name,
                         'reason': 'People like you use this.',
                         'score': 0.85, 

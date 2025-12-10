@@ -420,7 +420,7 @@ def recommend():
         return jsonify({'error': 'User not found'}), 404
         
     from .services import generate_financial_insights
-    recs = generate_financial_insights(user.id)
+    recs = get_hybrid_recommendations(user.id)
     
     return jsonify(recs), 200
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RecommendationCard = ({ product }) => {
+const RecommendationCard = ({ product, onClick }) => {
     const { product: name, category, reason, score } = product;
 
     // Determine border color based on category or implicit risk
@@ -38,7 +38,10 @@ const RecommendationCard = ({ product }) => {
     }
 
     return (
-        <div className={`bg-white rounded-lg shadow-sm p-5 border-l-4 ${borderColor} hover:shadow-md transition-shadow`}>
+        <div
+            onClick={onClick}
+            className={`bg-white rounded-lg shadow-sm p-5 border-l-4 ${borderColor} hover:shadow-md transition-shadow cursor-pointer`}
+        >
             <div className="flex justify-between items-start mb-2">
                 <div>
                     <h3 className="font-bold text-gray-800 text-lg">{name}</h3>
